@@ -1,11 +1,37 @@
 {
+	irregularRules = (
+		(
+			person,
+			people,
+		),
+		(
+			man,
+			men,
+		),
+		(
+			child,
+			children,
+		),
+		(
+			sex,
+			sexes,
+		),
+		(
+			move,
+			moves,
+		),
+		(
+			database,
+			databases,
+		),
+	);
 	pluralRules = (
 		(
-			"$",
+			"s$",
 			s,
 		),
 		(
-			"s$",
+			"$",
 			s,
 		),
 		(
@@ -13,11 +39,11 @@
 			"$1es",
 		),
 		(
-			"(octop|vir)us$",
+			"(cact|vir)us$",
 			"$1i",
 		),
 		(
-			"(alias|status)$",
+			"(octopus|alias|status)$",
 			"$1es",
 		),
 		(
@@ -169,32 +195,6 @@
 		(
 			"(quiz)zes$",
 			"$1",
-		),
-	);
-	irregularRules = (
-		(
-			person,
-			people,
-		),
-		(
-			man,
-			men,
-		),
-		(
-			child,
-			children,
-		),
-		(
-			sex,
-			sexes,
-		),
-		(
-			move,
-			moves,
-		),
-		(
-			database,
-			databases,
 		),
 	);
 	uncountableWords = (

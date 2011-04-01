@@ -48,7 +48,8 @@
     uncountableWords = [[NSMutableSet alloc] init];
     pluralRules = [[NSMutableArray alloc] init];
     singularRules = [[NSMutableArray alloc] init];
-    [self addInflectionsFromFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"ActiveSupportInflector" ofType:@"plist"]];
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"ActiveSupportInflector" ofType:@"plist"];
+    [self addInflectionsFromFile:path];
   } 
   return self; 
 }
@@ -110,10 +111,10 @@
   else {
     for (ActiveSupportInflectorRule* rule in rules) {
       NSRange range = NSMakeRange(0, [string length]);
-      NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:[rule rule] options:0 error:nil];
-      if ([regex firstMatchInString:string options:0 range:range]) {
-        // NSLog(@"rule: %@, replacement: %@", [rule rule], [rule replacement]);
-        return [regex stringByReplacingMatchesInString:string options:0 range:range withTemplate:[rule replacement]];
+      NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:[rule rule] options:NSRegularExpressionCaseInsensitive error:nil];
+        if ([regex firstMatchInString:string options:NSRegularExpressionCaseInsensitive range:range]) {
+        NSLog(@"rule: %@, replacement: %@", [rule rule], [rule replacement]);
+        return [regex stringByReplacingMatchesInString:string options:NSRegularExpressionCaseInsensitive range:range withTemplate:[rule replacement]];
       }
     }
     return string;
