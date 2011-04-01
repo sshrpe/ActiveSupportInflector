@@ -8,6 +8,7 @@
 
 @interface NSString (ActiveSupportInflector)
 
+- (NSString *)pluralizeWithInteger:(NSInteger)integer;
 - (NSString *)pluralizeString;
 - (NSString *)singularizeString;
 
