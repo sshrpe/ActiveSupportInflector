@@ -24,6 +24,26 @@
 			database,
 			databases,
 		),
+		(
+			foot,
+			feet,
+		),
+		(
+			belief,
+			beliefs,
+		),
+		(
+			"([aA])ttorney ([gG])eneral",
+			"$1ttorneys $2eneral",
+		),
+		(
+			goose,
+			geese,
+		),
+		(
+			leaf,
+			leaves,
+		),
 	);
 	pluralRules = (
 		(
@@ -206,5 +226,7 @@
 		series,
 		fish,
 		sheep,
+		deer,
+		moose,
 	);
 }

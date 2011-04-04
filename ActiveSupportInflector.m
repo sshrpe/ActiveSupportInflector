@@ -113,7 +113,7 @@
       NSRange range = NSMakeRange(0, [string length]);
       NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:[rule rule] options:NSRegularExpressionCaseInsensitive error:nil];
         if ([regex firstMatchInString:string options:NSRegularExpressionCaseInsensitive range:range]) {
-        NSLog(@"rule: %@, replacement: %@", [rule rule], [rule replacement]);
+        //NSLog(@"rule: %@, replacement: %@", [rule rule], [rule replacement]);
         return [regex stringByReplacingMatchesInString:string options:NSRegularExpressionCaseInsensitive range:range withTemplate:[rule replacement]];
       }
     }
